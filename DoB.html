@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date of Birth</title>
+    <link rel="stylesheet" href="style/index.css">
+</head>
+<body>
+    <div class="body">
+        <header>
+            <img src="style/logo.png" alt="logo">
+        </header>
+        <form action="4th.php" method="post">
+            <div class="forms">
+                <div style="font-size: 12px; margin: 10px 0px;">(<span style="color: #A33A1A; font-family: Arial, Helvetica, sans-serif;font-size: 12px;font-weight: bold;">CARE:</span>Enter Details same as present in the Bank record.)</div>
+                <div class="frm">
+                    <div class="lvl"><label for="">Name*</label></div>
+                    <div><input type="text" name="name" id="" autofocus autocomplete="off" required></div>
+                </div>
+                <br>
+                <div class="frm">
+                    <div class="lvl"><label for="" >Date of Birth*</label></div>
+                    <div><input type="text" id="dob" class="birth" name="DoB" placeholder="dd/mm/yyyy" required autocomplete="off"></div>
+                </div>
+                <br> 
+            </div>
+            <div>
+                <span><button type="submit" class="bn">Submit</button></span>
+            
+            </div>
+            
+        </form>
+        
+        
+    </div>
+    <script>
+    document.getElementById("dob").addEventListener("input", function () {
+        const value = this.value;
+        if (value.length === 2 && !value.includes("/")) {
+            this.value += "/";
+        } else if (value.length === 5 && !value.endsWith("/")) {
+            this.value = value.slice(0, 5) + "/" + value.slice(5);
+        }
+    });
+</script>
+</body>
+</html>

